@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import FirstScreen from './screens/firstScreen';
 import HomeScreen from './screens/homeScreen';
+import SecondScreen from './screens/secondScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,11 @@ export default function App() {
                         name='First Screen'
                         options={{ title: 'First Screen' }}
                         component={FirstScreen}
+                    />
+                    <Stack.Screen
+                        name='1_a'
+                        options={{ title: 'Second Screen' }}
+                        component={SecondScreen}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

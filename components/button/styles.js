@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 30,
         paddingVertical: 12,
     },
+    small: {
+        fontSize: 18,
+        lineHeight: 21,
+    },
     medium: {
         fontSize: 20,
         lineHeight: 23,

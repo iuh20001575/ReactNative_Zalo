@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Pressable } from 'react-native';
 import TextCustomize from '../text/TextCustomize';
@@ -26,12 +25,6 @@ const Button = ({
             </TextCustomize>
         </Pressable>
     );
-};
-
-Button.propTypes = {
-    children: PropTypes.string,
-    type: 'primary' | 'secondary',
-    size: 'small' | 'large' | 'medium',
 };
 
 export default Button;
