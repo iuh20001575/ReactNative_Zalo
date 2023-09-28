@@ -10,12 +10,7 @@ export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <NavigationContainer>
-                <Stack.Navigator
-                    initialRouteName='HomeScreen'
-                    screenOptions={{
-                        headerShown: false,
-                    }}
-                >
+                <Stack.Navigator initialRouteName='HomeScreen'>
                     <Stack.Screen
                         name='Home'
                         component={HomeScreen}
