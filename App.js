@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import FirstScreen from './screens/firstScreen';
+import HomeScreen from './screens/homeScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <Text>My Zalo App - React Native</Text>
-            <Text>Open up App.js to start working on your app!</Text>
-            <StatusBar style='auto' />
-        </View>
+        <SafeAreaView style={styles.container}>
+            <NavigationContainer>
+                <Stack.Navigator
+                    initialRouteName='HomeScreen'
+                    screenOptions={{
+                        headerShown: false,
+                    }}
+                >
+                    <Stack.Screen
+                        name='Home'
+                        component={HomeScreen}
+                        options={{ title: 'Home' }}
+                    />
+                    <Stack.Screen
+                        name='First Screen'
+                        options={{ title: 'First Screen' }}
+                        component={FirstScreen}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
 });
