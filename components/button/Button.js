@@ -9,15 +9,19 @@ const Button = ({
     type = 'primary',
     size = 'medium',
     rounded = 0,
+    full = false,
+    style = []
 }) => {
     return (
         <Pressable
             style={[
                 styles.container,
                 styles[type],
+                styles[full && 'full' || ''],
                 {
                     borderRadius: rounded,
                 },
+                ...style
             ]}
         >
             <TextCustomize style={[styles.text, styles[size]]}>
