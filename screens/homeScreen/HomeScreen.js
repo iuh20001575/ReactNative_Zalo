@@ -15,6 +15,10 @@ const screens = [
         title: '1_a Screen',
     },
     {
+        name: '1_b',
+        title: '1_b Screen',
+    },
+    {
         name: '1_c',
         title: '1_c Screen',
     },
