@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
     text: {
         textTransform: 'uppercase',
         fontWeight: 700,
+        textAlign: 'center'
     },
     primary: {
         backgroundColor: 'rgba(227, 192, 0, 1)',
@@ -18,6 +19,13 @@ const styles = StyleSheet.create({
         fontSize: 20,
         lineHeight: 23,
     },
+    large: {
+        fontSize: 18,
+        lineHeight: 25,
+    },
+    full: {
+        width: '100%'
+    }
 });
 
 export default styles;

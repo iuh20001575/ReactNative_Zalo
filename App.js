@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import FirstScreen from './screens/firstScreen';
+import FourthScreen from './screens/fourthScreen';
 import HomeScreen from './screens/homeScreen';
 import SecondScreen from './screens/secondScreen';
 import ThirdScreen from './screens/thirdScreen/ThirdScreen';
@@ -32,6 +33,11 @@ export default function App() {
                         name='1_b'
                         options={{ title: 'Thirty Screen' }}
                         component={ThirdScreen}
+                    />
+                    <Stack.Screen
+                        name='1_c'
+                        options={{ title: 'Fourth Screen' }}
+                        component={FourthScreen}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
