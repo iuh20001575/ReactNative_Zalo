@@ -4,6 +4,7 @@ import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import FirstScreen from './screens/firstScreen';
 import HomeScreen from './screens/homeScreen';
 import SecondScreen from './screens/secondScreen';
+import ThirdScreen from './screens/thirdScreen/ThirdScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,7 +12,7 @@ export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName='HomeScreen'>
+                <Stack.Navigator initialRouteName='Home'>
                     <Stack.Screen
                         name='Home'
                         component={HomeScreen}
@@ -26,6 +27,11 @@ export default function App() {
                         name='1_a'
                         options={{ title: 'Second Screen' }}
                         component={SecondScreen}
+                    />
+                    <Stack.Screen
+                        name='1_b'
+                        options={{ title: 'Thirty Screen' }}
+                        component={ThirdScreen}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
