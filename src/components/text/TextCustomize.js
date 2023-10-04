@@ -1,9 +1,9 @@
-import { Roboto_400Regular, useFonts } from '@expo-google-fonts/roboto';
 import React, { useMemo } from 'react';
 import { Text } from 'react-native';
+import { useRobotoFont } from '../../hooks';
 
 const TextCustomize = (props) => {
-    const [fontsLoaded] = useFonts({ Roboto_400Regular });
+    const font = useRobotoFont();
     const styles = useMemo(() => {
         const style = props.style;
 
@@ -11,22 +11,10 @@ const TextCustomize = (props) => {
 
         if (Array.isArray(style)) return style;
 
-        return [style];
-    });
+        return [style, font];
+    }, [font, props.style]);
 
-    if (!fontsLoaded) return null;
-
-    return (
-        <Text
-            {...props}
-            style={[
-                ...styles,
-                {
-                    fontFamily: 'Roboto_400Regular',
-                },
-            ]}
-        />
-    );
+    return <Text {...props} style={[...styles]} />;
 };
 
 export default TextCustomize;

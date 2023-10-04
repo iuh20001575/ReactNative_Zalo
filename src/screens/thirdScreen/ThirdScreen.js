@@ -1,17 +1,17 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
-import styles from './styles';
 import {
     Image,
+    Keyboard,
     KeyboardAvoidingView,
     Platform,
     TextInput,
     TouchableWithoutFeedback,
     View,
 } from 'react-native';
-import TextCustomize from '../../components/text/TextCustomize';
 import Button from '../../components/button';
-import { Keyboard } from 'react-native';
+import TextCustomize from '../../components/text/TextCustomize';
+import styles from './styles';
 
 const ThirdScreen = () => {
     return (
@@ -32,7 +32,7 @@ const ThirdScreen = () => {
                     <Image
                         resizeMode='cover'
                         style={styles.image}
-                        source={require('../../assets/lock.png')}
+                        source={require('../../../assets/lock.png')}
                     />
                     <TextCustomize style={styles.title}>
                         FORGET{'\n'}PASSWORD
@@ -51,7 +51,7 @@ const ThirdScreen = () => {
                         <View style={styles.inputGroup}>
                             <Image
                                 style={{ width: 48, height: 45 }}
-                                source={require('../../assets/email.png')}
+                                source={require('../../../assets/email.png')}
                             />
                             <TextInput
                                 cursorColor='#000'

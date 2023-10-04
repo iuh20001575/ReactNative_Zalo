@@ -4,12 +4,17 @@ const styles = StyleSheet.create({
     text: {
         textTransform: 'uppercase',
         fontWeight: 700,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     primary: {
         backgroundColor: 'rgba(227, 192, 0, 1)',
         paddingHorizontal: 30,
         paddingVertical: 12,
+    },
+    secondary: {
+        backgroundColor: 'rgba(229, 57, 53, 1)',
+        paddingHorizontal: 30,
+        paddingVertical: 10,
     },
     small: {
         fontSize: 18,
@@ -24,8 +29,8 @@ const styles = StyleSheet.create({
         lineHeight: 25,
     },
     full: {
-        width: '100%'
-    }
+        width: '100%',
+    },
 });
 
 export default styles;

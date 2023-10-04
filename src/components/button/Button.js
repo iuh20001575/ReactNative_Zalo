@@ -10,21 +10,29 @@ const Button = ({
     size = 'medium',
     rounded = 0,
     full = false,
-    style = []
+    style = [],
 }) => {
     return (
         <Pressable
             style={[
                 styles.container,
                 styles[type],
-                styles[full && 'full' || ''],
+                styles[(full && 'full') || ''],
                 {
                     borderRadius: rounded,
                 },
-                ...style
+                ...style,
             ]}
         >
-            <TextCustomize style={[styles.text, styles[size]]}>
+            <TextCustomize
+                style={[
+                    styles.text,
+                    {
+                        color: type === 'primary' ? '#000' : '#fff',
+                    },
+                    styles[size],
+                ]}
+            >
                 {children}
             </TextCustomize>
         </Pressable>

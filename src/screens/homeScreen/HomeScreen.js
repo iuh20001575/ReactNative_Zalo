@@ -22,6 +22,10 @@ const screens = [
         name: '1_c',
         title: '1_c Screen',
     },
+    {
+        name: '1_d',
+        title: '1_d Screen',
+    },
 ];
 
 const HomeScreen = ({ navigation }) => {
