@@ -31,6 +31,7 @@ const FifthScreen = () => {
                         type='secondary'
                         size='large'
                         style={[styles.loginBtn]}
+                        rounded={2}
                     >
                         Login
                     </Button>

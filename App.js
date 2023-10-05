@@ -6,45 +6,62 @@ import FirstScreen from './src/screens/firstScreen';
 import FourthScreen from './src/screens/fourthScreen';
 import HomeScreen from './src/screens/homeScreen';
 import SecondScreen from './src/screens/secondScreen';
+import SixthScreen from './src/screens/sixthScreen';
 import ThirdScreen from './src/screens/thirdScreen';
 
 const Stack = createNativeStackNavigator();
+
+const screens = [
+    {
+        name: 'Home',
+        title: 'Home',
+        component: HomeScreen,
+    },
+    {
+        name: 'First Screen',
+        title: 'First Screen',
+        component: FirstScreen,
+    },
+    {
+        name: '1_a',
+        title: 'Second Screen',
+        component: SecondScreen,
+    },
+    {
+        name: '1_b',
+        title: 'Thirty Screen',
+        component: ThirdScreen,
+    },
+    {
+        name: '1_c',
+        title: 'Fourth Screen',
+        component: FourthScreen,
+    },
+    {
+        name: '1_d',
+        title: 'Fifth Screen',
+        component: FifthScreen,
+    },
+    {
+        name: '1_e',
+        title: 'Sixth Screen',
+        component: SixthScreen,
+    },
+];
 
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <NavigationContainer>
                 <Stack.Navigator initialRouteName='Home'>
-                    <Stack.Screen
-                        name='Home'
-                        component={HomeScreen}
-                        options={{ title: 'Home' }}
-                    />
-                    <Stack.Screen
-                        name='First Screen'
-                        options={{ title: 'First Screen' }}
-                        component={FirstScreen}
-                    />
-                    <Stack.Screen
-                        name='1_a'
-                        options={{ title: 'Second Screen' }}
-                        component={SecondScreen}
-                    />
-                    <Stack.Screen
-                        name='1_b'
-                        options={{ title: 'Thirty Screen' }}
-                        component={ThirdScreen}
-                    />
-                    <Stack.Screen
-                        name='1_c'
-                        options={{ title: 'Fourth Screen' }}
-                        component={FourthScreen}
-                    />
-                    <Stack.Screen
-                        name='1_d'
-                        options={{ title: 'Fifth Screen' }}
-                        component={FifthScreen}
-                    />
+                    {screens.map((screen) => (
+                        <Stack.Screen
+                            key={screen.name}
+                            name={screen.name}
+                            component={screen.component}
+                            options={{ title: screen.title }}
+                        />
+                    ))}
                 </Stack.Navigator>
             </NavigationContainer>
         </SafeAreaView>
