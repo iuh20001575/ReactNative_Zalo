@@ -1,14 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import EighthScreen from './src/screens/eighthScreen';
 import FifthScreen from './src/screens/fifthScreen';
 import FirstScreen from './src/screens/firstScreen';
 import FourthScreen from './src/screens/fourthScreen';
 import HomeScreen from './src/screens/homeScreen';
 import SecondScreen from './src/screens/secondScreen';
+import SeventhScreen from './src/screens/seventhScreen';
 import SixthScreen from './src/screens/sixthScreen';
 import ThirdScreen from './src/screens/thirdScreen';
-import SeventhScreen from './src/screens/seventhScreen/SeventhScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +53,11 @@ const screens = [
         name: '2_a',
         title: 'Seventh Screen',
         component: SeventhScreen,
+    },
+    {
+        name: 'XMEye',
+        title: 'XMEye Screen',
+        component: EighthScreen,
     },
 ];
 

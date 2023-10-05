@@ -34,6 +34,10 @@ const screens = [
         name: '2_a',
         title: '2_a Screen',
     },
+    {
+        name: 'XMEye',
+        title: 'XMEye Screen',
+    },
 ];
 
 const HomeScreen = ({ navigation }) => {
