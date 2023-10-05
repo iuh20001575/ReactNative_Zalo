@@ -8,6 +8,7 @@ import HomeScreen from './src/screens/homeScreen';
 import SecondScreen from './src/screens/secondScreen';
 import SixthScreen from './src/screens/sixthScreen';
 import ThirdScreen from './src/screens/thirdScreen';
+import SeventhScreen from './src/screens/seventhScreen/SeventhScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,11 @@ const screens = [
         name: '1_e',
         title: 'Sixth Screen',
         component: SixthScreen,
+    },
+    {
+        name: '2_a',
+        title: 'Seventh Screen',
+        component: SeventhScreen,
     },
 ];
 

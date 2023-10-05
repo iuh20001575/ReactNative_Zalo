@@ -16,6 +16,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 30,
         paddingVertical: 10,
     },
+    dark: {
+        backgroundColor: '#060000',
+        paddingHorizontal: 30,
+        paddingVertical: 9,
+    },
     small: {
         fontSize: 18,
         lineHeight: 21,
