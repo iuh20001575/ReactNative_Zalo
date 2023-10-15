@@ -3,8 +3,6 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundImage:
-            'linear-gradient(180deg, rgba(0, 204, 249, 0.359978) 0%, rgba(0, 204, 249, 1) 100%)',
         justifyContent: 'center',
         alignItems: 'center',
     },

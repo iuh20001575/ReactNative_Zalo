@@ -1,9 +1,10 @@
 import React from 'react';
 import { SafeAreaView, View } from 'react-native';
 import ScreenItem from '../../components/screenItem';
-import TextCustomize from '../../components/text/TextCustomize';
+import TextCustomize from '../../components/text';
 
 import styles from './styles';
+import Wrapper from '../../components/wrapper';
 
 const screens = [
     {
@@ -42,7 +43,14 @@ const screens = [
 
 const HomeScreen = ({ navigation }) => {
     return (
-        <SafeAreaView style={[styles.container]}>
+        <Wrapper
+            styleScrollView={styles.scrollView}
+            styleSafeAreaView={styles.safeAreaView}
+            contentContainerStyle={{
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}
+        >
             <TextCustomize style={[styles.title]}>Lab 03</TextCustomize>
             <View style={[styles.screenList]}>
                 {screens.map((screen, index) => (
@@ -55,7 +63,7 @@ const HomeScreen = ({ navigation }) => {
                     </ScreenItem>
                 ))}
             </View>
-        </SafeAreaView>
+        </Wrapper>
     );
 };
 
